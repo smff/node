@@ -1,0 +1,12 @@
+version: '2'
+services:
+  web:
+    image: nodeapp
+    links:
+      - db
+    ports:
+      - "3000:3000"
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
